@@ -1,0 +1,119 @@
+* {
+    font-family: FreeSans, "Helvetica Neue", "Segoe UI" !important;
+}
+
+body { font-size: 11px; }
+
+.btn:hover, a.btn:visited {
+    font-size:13px !important; //fixes buttons being messed up on hover
+}
+
+a.btn:visited, a.btn:link {
+    font-size: 13px;
+    color: #333;
+}
+
+#ivlemsg {
+    padding: 20px 5px 10px;
+    margin-bottom: 10px;
+    background-color: #e7e7e7;
+    border-radius: 8px;
+}
+#ivlemsg * {
+    color: #676767;
+    font-size: 12px;
+
+    br {
+       height: 0px;
+    }
+    p { margin-bottom: 25px; }
+    p:first-child { margin-bottom: 0px; }
+    a { font-style: italic; }
+}
+
+#ctl00_ContentPlaceHolder1_ctl02_TC_TP_Module > table > tbody > tr > td > div > table > tbody {
+    > tr:nth-child(4n+2), > tr:nth-child(4n+1) {
+        background-color: #e7e7e7;
+        border-radius: 5px;
+        }
+    tr[valign="top"] {
+        > td[align="left"] {
+            margin-bottom: 30px;
+            }
+        }
+    tr td[width="*"] {
+        span .wsToolTitle-txt {
+            color: #676767;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+        font.wsLegendOther-txt {
+            color: black;
+            }
+    }
+    tr[valign="top"] td[width="*"] {
+        > a {
+            margin-left: 10px;
+            }
+        font.wsToolTitle-txt, > font.wsCourseName-txt {
+            color: #676767;
+            font-style: italic;
+            text-transform: lowercase;
+            }
+    }
+}
+
+$sidebarWidth: 200px;
+$sidebarMargin: 60px;
+//left sidebar
+#ctl00_ContentPlaceHolder1_C1 {
+    width: $sidebarWidth+$sidebarMargin !important;
+    > div, >div>table {
+        width: $sidebarWidth !important;
+    }
+    //events
+    #events_listing {
+        background-color: white !important;
+        
+        > div {
+            background-color: white !important;
+            height: 400px !important;
+            width: 200px !important;
+            a {
+                color: #676767;
+
+            }
+            tr { background-color: white; }
+            tr:nth-child(odd) {
+                background-color: #eeeeee;
+            }
+            td { padding-bottom: 5px; }
+        }
+    }
+}
+
+//right sidebar
+#ctl00_ContentPlaceHolder1_C3 {
+    width: $sidebarWidth+$sidebarMargin !important;
+    >div {
+        margin-left: $sidebarMargin;
+    }
+    >div, >div>table {
+        width: $sidebarWidth !important;
+    }
+}
+
+//calendar
+#ctl00_ContentPlaceHolder1_ctl01_tbheader {
+    td.day {
+        width: 14%;
+    }
+}
+
+#expand-events {
+    margin:5px 0 0 65px;
+}
+
+#rightButtons {
+    .btn-primary { margin: 0 5px 0 5px; }
+}

@@ -1,0 +1,13 @@
+{
+    "name": "IVLE Fix",
+    "version": "0.1",
+    "description": "Fixes IVLE looks for this century",
+    "permissions": [
+        "http://ivle.nus.edu.sg"
+    ],
+    "content_scripts": [{
+                             "matches": ["http://ivle.nus.edu.sg/*"],
+                             "css": ["bootstrap.min.css", "ivle.css"],
+                             "js": ["jquery.min.js", "underscore.min.js", "code.js"]
+                         }]
+}
