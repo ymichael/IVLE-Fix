@@ -51,8 +51,8 @@ Do note that Chromium doesn't auto-reload your extension files. So if you make c
 
 I'm going to regret adding this. Having to update the screenshots on every commit is going to be a PITA.
 
-![Before](http://darora.github.com/ivle-fix/images/before.png)
-![After](http://darora.github.com/ivle-fix/images/after.png)
+![Before](https://github.com/darora/IVLE-Fix/raw/master/images/before.png)
+![After](https://github.com/darora/IVLE-Fix/raw/master/images/after.png)
 
 ### Not using Chrome/Chromium?
 
