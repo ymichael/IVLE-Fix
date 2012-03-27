@@ -13,7 +13,7 @@ Code might be--scratch that--is a bit messy right now. On the list of things to 
 
 * Using git
 
-```git clone https://github.com/darora/ivle-fix/```
+```git clone https://github.com/darora/IVLE-Fix.git```
 
 * Manually
     * Download using the Github .zip download option
@@ -24,6 +24,9 @@ Code might be--scratch that--is a bit messy right now. On the list of things to 
 * Chromium -> Tools -> Extensions
     * Enable 'Developer Mode'
     * Click on 'Load unpacked extension...' & navigate to the folder you downloaded the files to
+* Chrome 11 (Mac)
+	* Preferences -> Extensions -> Enable Developer Mode
+	* Click on 'Load unpacked extension...' & navigate to the folder you downloaded the files to
 
 ### Contributing
 
