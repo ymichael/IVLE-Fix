@@ -1,4 +1,5 @@
 (function() {
+
   $(function() {
     var blueText, cal, dt, eventButton, events, eventsHidden, ivlemsg, rightButtons, text, toggleMessages;
     $("#ivlemsg p").find("br").remove();
@@ -55,4 +56,5 @@
     rightButtons.append(toggleMessages);
     return toggleMessages.trigger('click');
   });
+
 }).call(this);

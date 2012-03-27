@@ -6,6 +6,10 @@
         "http://ivle.nus.edu.sg"
     ],
     "content_scripts": [{
+                             "matches": ["https://ivle.nus.edu.sg/"],
+                             "js": ["jquery.min.js", "login.js"]   
+                        },
+                        {
                              "matches": ["http://ivle.nus.edu.sg/*"],
                              "css": ["bootstrap.min.css", "ivle.css"],
                              "js": ["jquery.min.js", "underscore.min.js", "code.js"]
