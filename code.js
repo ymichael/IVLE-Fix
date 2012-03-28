@@ -1,7 +1,8 @@
 (function() {
 
   $(function() {
-    var blueText, cal, dt, eventButton, events, eventsHidden, ivlemsg, rightButtons, text, toggleMessages;
+    var DEBUG, blueText, cal, dt, eventButton, events, eventsHidden, ivlemsg, rightButtons, text, toggleMessages;
+    DEBUG = true;
     $("#ivlemsg p").find("br").remove();
     blueText = $("div#ctl00_ContentPlaceHolder1_ctl02_TC_TP_Module font[color='blue'] > a");
     rightButtons = blueText.closest("td").siblings("td[align='right']");
@@ -54,7 +55,31 @@
       return false;
     });
     rightButtons.append(toggleMessages);
-    return toggleMessages.trigger('click');
+    toggleMessages.trigger('click');
+    Shadowbox.init({
+      path: "chrome-extension://__MSG_@@extension_id__/shadowbox/",
+      skipSetup: true
+    });
+    if (DEBUG) window.Shadowbox = Shadowbox;
+    return _($('a')).chain().filter(function(e) {
+      var tmp;
+      tmp = e.attributes.getNamedItem('onclick');
+      return tmp !== null && tmp.nodeValue.indexOf('winopen' !== -1);
+    }).each(function(e) {
+      var url;
+      e = $(e);
+      url = e.attr('onclick');
+      url = url.substring(url.indexOf("'") + 1, url.lastIndexOf("'"));
+      url = "http://" + document.domain + url;
+      e.attr('onclick', '');
+      return e.on('click', function(f) {
+        Shadowbox.open({
+          content: url,
+          player: "iframe"
+        });
+        return false;
+      });
+    });
   });
 
 }).call(this);

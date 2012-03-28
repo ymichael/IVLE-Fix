@@ -1,4 +1,5 @@
 $ () ->
+        DEBUG = true
         #Remove blank lines from messages that look like crap. This is most likely a temporary fix for the current messages.
         $("#ivlemsg p").find("br").remove()
 
@@ -61,3 +62,26 @@ $ () ->
                 false
         rightButtons.append toggleMessages
         toggleMessages.trigger 'click'
+
+        Shadowbox.init
+                path: `"chrome-extension://__MSG_@@extension_id__/shadowbox/"`
+                skipSetup: true
+
+        if DEBUG
+                window.Shadowbox = Shadowbox
+        #initialize shadowbox
+        _($('a')).chain().filter((e) ->
+                tmp = e.attributes.getNamedItem 'onclick'
+                tmp != null and tmp.nodeValue.indexOf 'winopen' != -1)
+                .each (e) ->
+                        e = $(e)
+                        url = e.attr 'onclick'
+                        url = url.substring(url.indexOf("'")+1, url.lastIndexOf("'"))
+                        url = "http://#{document.domain}#{url}"
+                        e.attr 'onclick', ''
+
+                        e.on 'click', (f) ->
+                                Shadowbox.open
+                                        content: url
+                                        player: "iframe"
+                                false
