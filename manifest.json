@@ -11,7 +11,7 @@
                         },
                         {
                              "matches": ["http://ivle.nus.edu.sg/*"],
-                             "css": ["bootstrap.min.css", "ivle.css"],
-                             "js": ["jquery.min.js", "underscore.min.js", "code.js"]
+                             "css": ["bootstrap.min.css", "shadowbox/shadowbox.css", "ivle.css"],
+                             "js": ["jquery.min.js", "underscore.min.js", "shadowbox/s.js", "code.js"]
                          }]
 }
