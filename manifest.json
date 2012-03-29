@@ -6,7 +6,7 @@
         "http://ivle.nus.edu.sg"
     ],
     "content_scripts": [{
-                             "matches": ["https://ivle.nus.edu.sg/"],
+                             "matches": ["https://ivle.nus.edu.sg/","https://ivle.nus.edu.sg/default.aspx?ReturnUrl=workspace.aspx"],
                              "js": ["jquery.min.js", "login.js"]   
                         },
                         {
